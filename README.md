@@ -69,7 +69,7 @@ python -m torch.distributed.launch $@ run_conmim_pretraining.py \
 ```
 
 ## Fine-tuning on ImageNet-1K Classification
-+ We finetune the pre-trained ViT-Base model with 8 NVIDIA A100/V100 GPUs as follows: 
++ We finetune the pre-trained ViT-B/16 model with 8 NVIDIA A100/V100 GPUs as follows: 
 ```
 CKP="./output/conmim_pretrained/checkpoint_copy-799.pth"
 OUTPUT_DIR="./output/conmim_finetuned/"
