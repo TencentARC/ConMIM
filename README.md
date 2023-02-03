@@ -22,7 +22,7 @@ Official PyTorch implementation and pretrained models of "Masked Image Modeling 
 
 ## Visualization
 Visualize the self-attention map between [CLS] token and local tokens of the pre-trained ViT-B/16 model on ImageNet-1K, where (a) indicates ConMIM pretraining and (b) indicates the vanilla instance-level contrastive pre-training. Self-attention maps out of 12 attention heads are averaged. It can be observed that ConMIM-pretrained models are much more locally discriminative and aware of the visual context.
-![Vis](./imgs/Vis.png)
+![Vis](./imgs/vis.png)
 
 ## Setup
 Clone the github repo and install the required packages.
