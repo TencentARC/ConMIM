@@ -1,12 +1,7 @@
 # --------------------------------------------------------
-# BEIT: BERT Pre-Training of Image Transformers (https://arxiv.org/abs/2106.08254)
+# Original Code from BEIT: BERT Pre-Training of Image Transformers (https://arxiv.org/abs/2106.08254)
 # Github source: https://github.com/microsoft/unilm/tree/master/beit
-# Copyright (c) 2021 Microsoft
-# Licensed under The MIT License [see LICENSE for details]
-# By Hangbo Bao
-# Based on timm code bases
-# https://github.com/rwightman/pytorch-image-models/tree/master/timm
-# --------------------------------------------------------'
+# --------------------------------------------------------
 import torch
 import torchvision.transforms.functional as F
 from PIL import Image

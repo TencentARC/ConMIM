@@ -22,13 +22,12 @@ Official PyTorch implementation and pretrained models of "Masked Image Modeling 
 
 ## Visualization
 Visualize the self-attention map between [CLS] token and local tokens of the pre-trained ViT-B/16 model on ImageNet-1K, where (a) indicates ConMIM pretraining and (b) indicates the vanilla instance-level contrastive pre-training. Self-attention maps out of 12 attention heads are averaged. It can be observed that ConMIM-pretrained models are much more locally discriminative and aware of the visual context.
-![Vis](./imgs/vis.png)
+![Vis](./imgs/Vis.png)
 
 ## Setup
 Clone the github repo and install the required packages.
 ```
-git clone https://github.com/TencentARC/ConMIM.git
-cd ./ConMIM
+git clone git@github.com:lixiaotong97/mc-BEiT.git
 pip install -r requirements.txt
 ```
 For mixed-precision training, please install [apex](https://github.com/NVIDIA/apex)
@@ -69,9 +68,9 @@ python -m torch.distributed.launch $@ run_conmim_pretraining.py \
 ```
 
 ## Fine-tuning on ImageNet-1K Classification
-+ We finetune the pre-trained ViT-B/16 model with 8 NVIDIA A100/V100 GPUs as follows: 
++ We finetune the pre-trained ViT-Base model with 8 NVIDIA A100/V100 GPUs as follows: 
 ```
-CKP="./output/conmim_pretrained/checkpoint_copy-799.pth"
+CKP="./output/conmim_pretrained/checkpoint-799.pth"
 OUTPUT_DIR="./output/conmim_finetuned/"
 DATA_PATH="/dataset/imagenet1k/"
 mkdir -p $OUTPUT_DIR
