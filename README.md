@@ -27,7 +27,7 @@ Visualize the self-attention map between [CLS] token and local tokens of the pre
 ## Setup
 Clone the github repo and install the required packages.
 ```
-git clone git@github.com:lixiaotong97/mc-BEiT.git
+git clone https://github.com/TencentARC/ConMIM.git
 pip install -r requirements.txt
 ```
 For mixed-precision training, please install [apex](https://github.com/NVIDIA/apex)
@@ -70,7 +70,7 @@ python -m torch.distributed.launch $@ run_conmim_pretraining.py \
 ## Fine-tuning on ImageNet-1K Classification
 + We finetune the pre-trained ViT-Base model with 8 NVIDIA A100/V100 GPUs as follows: 
 ```
-CKP="./output/conmim_pretrained/checkpoint-799.pth"
+CKP="./output/conmim_pretrained/checkpoint_copy-799.pth"
 OUTPUT_DIR="./output/conmim_finetuned/"
 DATA_PATH="/dataset/imagenet1k/"
 mkdir -p $OUTPUT_DIR
